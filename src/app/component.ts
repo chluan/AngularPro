@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
-import { NgForm } from "@angular/forms";
-import { Model } from "./repository.model";
-import { Product } from "./product.model";
-import { ProductFormGroup } from "./form.model";
+// import { NgForm } from "@angular/forms";
+// import { Model } from "./repository.model";
+// import { Product } from "./product.model";
+// import { ProductFormGroup } from "./form.model";
 
 
 @Component({
@@ -12,14 +12,15 @@ import { ProductFormGroup } from "./form.model";
 })
 
 export class ProductComponent {
-    model: Model = new Model();
+    //model: Model = new Model();
     // form: ProductFormGroup = new ProductFormGroup();
     // showTable: boolean = true;
 
+    // constructor(private model: Model){}
     
-    addProduct(p: Product) {
-        this.model.saveProduct(p);
-    }
+    // addProduct(p: Product) {
+    //     this.model.saveProduct(p);
+    // }
 
 //     getProductByPosition(position: number): Product {
 //         return this.model.getProducts[position];

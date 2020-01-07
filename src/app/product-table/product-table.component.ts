@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChildren, QueryList } from '@angular/core';
-import { Model } from "../repository.model";
-import { Product } from "../product.model";
+import { Model } from "../model/repository.model";
+import { Product } from "../model/product.model";
 import { PaCellColor } from "../cellColor.directive";
 import { ChildrenOutletContexts } from '@angular/router';
 import { DiscountService } from "../discount.service";
@@ -14,12 +14,12 @@ export class ProductTableComponent implements OnInit {
 
   discounter: DiscountService = new DiscountService();
 
-  @Input("model")
-  dataModel: Model;
+  // @Input("model")
+  // dataModel: Model;
 
   categoryFilter: string = "None";
 
-  constructor() { }
+  constructor(private dataModel: Model) { }
 
   getProduct(key: number): Product {
     return this.dataModel.getProduct(key);
